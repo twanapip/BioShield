@@ -19,19 +19,19 @@
 
 ---
 
-## 📖 Overview
-
 BioShield is a machine-learning framework for antimicrobial peptide (AMP) classification and computational prioritization of peptide candidates relevant to biofilm control in *Pseudomonas aeruginosa*.
+
+## 📖 Overview
 
 BioShield combines:
 
-- 🧪 28 physicochemical peptide features
-- 🧬 ESM-2 protein-language-model embeddings
-- 🌲 XGBoost classification
-- 🔀 Group-aware cross-validation for model evaluation
-- 📐 Platt probability calibration
-- 🧩 Similarity-family-aware train/validation/test splitting
-- ✅ Independent external evaluation
+- 28 physicochemical peptide features
+- ESM-2 protein-language-model embeddings
+- XGBoost classification
+- Group-aware cross-validation for model evaluation
+- Platt probability calibration
+- Similarity-family-aware train/validation/test splitting
+- Independent external evaluation
 
 The final released fusion model uses **28 physicochemical features + 480-dimensional ESM-2 35M embeddings**, for a total of **508 features**.
 
@@ -116,7 +116,9 @@ The final BioShield classifier is an XGBoost binary classification model.
 
 Probability calibration was performed using Platt scaling on 5-fold StratifiedGroupKFold out-of-fold training predictions.
 
-Locked classification threshold: **0.495**
+Locked classification threshold:
+
+**0.495**
 
 ---
 
@@ -152,7 +154,49 @@ Independent test confusion matrix:
 
 ### Final Test Protocol
 
-The independent test set was frozen before final evaluation and was evaluated without post-hoc threshold optimization. The reported independent-test results therefore represent the locked final evaluation.
+The independent test set was frozen before final evaluation and was evaluated without post-hoc threshold optimization.
+
+The reported independent-test results therefore represent the locked final evaluation.
+
+---
+
+## 🗂️ Repository Structure
+
+### Final model and results
+
+- `models/BioShield_fusion_esm35.pkl` — frozen BioShield fusion model (9,512-sequence dataset)
+- `models/SHA256SUMS.txt` — SHA-256 checksum of the frozen model
+- `evaluation/BioShield_final_test_metrics.csv` — independent test metrics
+- `evaluation/BioShield_final_test_predictions.csv` — independent test predictions
+- `data/BioShield_similarity_families.csv` — final similarity-family assignments
+- `data/bioshield_feature_index.csv` — feature/index mapping
+
+### Feature representation
+
+The released fusion model uses:
+- 28 physicochemical features
+- 480-dimensional ESM-2 35M embeddings
+- 508 total input features
+
+`BioShield_features/` contains the generated training-time feature matrices used for model development and reproducibility (`phys_BioShield.npy`, `esm35_BioShield.npy`). The `esm8` and `esm150` matrices were used only for ablation comparisons and are not part of the released model.
+
+### Independent evaluation
+
+- `external_validation/baamps_pa_biofilm_formation_INDEPENDENT_FINAL.csv`
+- `external_validation/baamps_pa_biofilm_formation_INDEPENDENT_FINAL.fasta`
+- `external_validation/baamps_pa_biofilm_formation_INDEPENDENT_PREDICTIONS.csv`
+
+### 🔁 Reproducibility
+
+`feats_BioShield.py` contains the final feature-generation workflow.
+
+Development and validation scripts are retained under:
+
+`scripts/development/`
+
+These include the nested-CV, dataset-audit, family-construction, and final-test evaluation scripts used during development.
+
+The repository intentionally excludes temporary databases, intermediate similarity-search files, obsolete dataset versions, cached files, and experimental artifacts.
 
 ---
 
@@ -198,43 +242,6 @@ This external validation should be interpreted as an additional independent eval
 - Independent-test scores (ROC-AUC 0.9878) are higher than the nested group-aware CV mean (ROC-AUC 0.9428 ± 0.0056). The nested-CV estimate should be treated as the more conservative estimate of generalization.
 - The external set is small (31 positive, 10 negative), so its metrics have wide uncertainty.
 - Predictions are computational and require experimental validation.
-
----
-
-## 🗂️ Repository Structure
-
-### Final model and results
-
-- `models/BioShield_fusion_esm35.pkl` — frozen BioShield fusion model (9,512-sequence dataset)
-- `models/SHA256SUMS.txt` — SHA-256 checksum of the frozen model
-- `evaluation/BioShield_final_test_metrics.csv` — independent test metrics
-- `evaluation/BioShield_final_test_predictions.csv` — independent test predictions
-- `data/BioShield_similarity_families.csv` — final similarity-family assignments
-- `data/bioshield_feature_index.csv` — feature/index mapping
-
-### Feature representation
-
-The released fusion model uses:
-
-- 28 physicochemical features
-- 480-dimensional ESM-2 35M embeddings
-- 508 total input features
-
-`BioShield_features/` contains the generated training-time feature matrices used for model development and reproducibility (`phys_BioShield.npy`, `esm35_BioShield.npy`). The `esm8` and `esm150` matrices were used only for ablation comparisons and are not part of the released model.
-
-### Independent evaluation
-
-- `external_validation/baamps_pa_biofilm_formation_INDEPENDENT_FINAL.csv`
-- `external_validation/baamps_pa_biofilm_formation_INDEPENDENT_FINAL.fasta`
-- `external_validation/baamps_pa_biofilm_formation_INDEPENDENT_PREDICTIONS.csv`
-
-### 🔁 Reproducibility
-
-`feats_BioShield.py` contains the final feature-generation workflow.
-
-Development and validation scripts are retained under `scripts/development/`. These include the nested-CV, dataset-audit, family-construction, and final-test evaluation scripts used during development.
-
-The repository intentionally excludes temporary databases, intermediate similarity-search files, obsolete dataset versions, cached files, and experimental artifacts.
 
 ---
 

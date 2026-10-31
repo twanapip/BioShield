@@ -1,0 +1,3 @@
+id,sequence,length,raw_probability,calibrated_probability,prediction,prediction_label
+example_peptide_1,KWYRFLKTFKAAVKTVLHTALKAISI,26,0.99979895,0.9974589151211016,1,AMP
+example_peptide_2,GLTFLKCILNFAKKIVTAWW,20,0.99947697,0.9949672258696933,1,AMP

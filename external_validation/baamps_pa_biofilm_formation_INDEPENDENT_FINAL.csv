@@ -1,0 +1,42 @@
+peptide_name,peptide_sequence,activity,label,evidence,length,standard_sequence,exact_train_overlap,benchmark,independence_filter
+1002 or L1002,VQRWLIVWRIRK,Formation (3-24h),0,"<= 20 %,Not Active",12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+1010,IRWRIRVWVRRI,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+1010cys,IRWRIRVWVRRIC,Formation (3-24h),1,51 - 90%,13,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+1018 or IDR-1018,VRLIVAVRIWRR,Formation (3-24h),1,"21 - 50%,51 - 90%,<= 20 %,> 90%",12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+1020,VRLRIRWWVLRK,Formation (3-24h),1,21 - 50%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+1026,VQWRIRVRVIKK,Formation (3-24h),1,51 - 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+1036,VQFRIRVRIVIRK,Formation (3-24h),1,21 - 50%,13,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+All L-K6L9,LKLLKKLLKKLLKLL,Formation (3-24h),1,"21 - 50%,<= 20 %,> 90%",15,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+CWR11,CWFWKWWRRRRR,Formation (3-24h),1,51 - 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HE1 or RI1018,RRWIRVAVILRV,Formation (3-24h),1,> 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HE10,VRLIVRIWRR,Formation (3-24h),1,21 - 50%,10,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HE2,VRLIRAVRAWRV,Formation (3-24h),1,21 - 50%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HE3,VRWARVARILRV,Formation (3-24h),1,21 - 50%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HE4,VRLIWAVRIWRR,Formation (3-24h),1,> 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HH10,KRFRIRVAVRRA,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HH15,KRFRIRVRVIRK,Formation (3-24h),1,21 - 50%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HH2,VQLRIRVAVIRA,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+HH7,VRLRIRVAVRRA,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+Holothurioidin 1,HLGHHALDHLLK,Formation (3-24h),1,51 - 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+Holothurioidin 2,ASHLGHHALDHLLK,Formation (3-24h),1,"21 - 50%,51 - 90%",14,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LJK2,VFWRRIRVWVIR,Formation (3-24h),1,21 - 50%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LJK3,VQLRAIRVRVIR,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LJK5,VQWRAIRVRVIR,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LJK6,VQWRRIRVWVIR,Formation (3-24h),1,51 - 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LL-13,LLGDFFRKSKEKI,Formation (3-24h),0,Not Active,13,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LL-19,LLGDFFRKSKEKIGKEFKR,Formation (3-24h),1,21 - 50%,19,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LL-25,LLGDFFRKSKEKIGKEFKRIVQRIK,Formation (3-24h),1,51 - 90%,25,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+LL13-31,IGKEFKRIVQRIKDFLRNL,Formation (3-24h),1,21 - 50%,19,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+NRC-16,GWKKWLRKGAKHLGQAAIK,Formation (3-24h),1,"<= 20 %,> 90%",19,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+R-FV-I16,RFRRLFRIRVRVLKKI,Formation (3-24h),1,"21 - 50%,<= 20 %",16,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+RIJK1,RIVIVRIRRLFV,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+RIJK2,RIVWVRIRRWFV,Formation (3-24h),1,> 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+RIJK3,RIVRVRIARLQV,Formation (3-24h),1,> 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+RIJK4,RIVWVRIRRLQV,Formation (3-24h),1,> 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+RIJK5,RIVRVRAIRWQV,Formation (3-24h),0,Not Active,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+RIJK6,RIVWVRIRRWQV,Formation (3-24h),1,51 - 90%,12,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+Tachyplesin III,KWCFRVCYRGICYRKCR,Formation (3-24h),1,>= 3 log,17,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+Tet-20,KRWRIRVRVIRKC,Formation (3-24h),1,51 - 90%,13,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+Tet-213,KRWWKWWRRC,Formation (3-24h),1,51 - 90%,10,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+Tet-26,WIVVIWRRKRRRC,Formation (3-24h),1,>= 2 log,13,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set
+lin-SB056-1,KWKIRVRLSA,Formation (3-24h),1,51 - 90%,10,True,False,BaAMPs_P_aeruginosa_biofilm_formation,No exact overlap; no >=40% identity and >=80% coverage hit to BioShield training set

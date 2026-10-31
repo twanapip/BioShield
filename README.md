@@ -170,3 +170,35 @@ Predictions are computational and should be experimentally validated before biol
 ## Citation
 
 If you use BioShield in academic work, please cite the associated project or thesis publication when available.
+
+## Usage
+
+```bash
+pip install -r requirements.txt
+
+python predict.py \
+  --fasta examples/example.fasta \
+  --model models/BioShield_fusion_esm35.pkl \
+  --output predictions.csv
+```
+
+Output columns: `id, sequence, length, raw_probability, calibrated_probability, prediction, prediction_label` (locked threshold 0.495).
+
+Verify model integrity:
+
+```bash
+sha256sum -c models/SHA256SUMS.txt
+```
+
+The model is a joblib pickle. Load it only from this repository's official release.
+
+## Limitations
+
+- On the independent BaAMPs set (41 peptides), specificity was 0.10: 9 of 10 negatives were predicted positive. The classifier is over-permissive on this external negative set, so external performance should not be assumed to match the internal test results.
+- Independent-test scores (ROC-AUC 0.9878) are higher than the nested group-aware CV mean (ROC-AUC 0.9428 ± 0.0056). The nested-CV estimate should be treated as the more conservative estimate of generalization.
+- The external set is small (31 positive, 10 negative), so its metrics have wide uncertainty.
+- Predictions are computational and require experimental validation.
+
+## Feature files
+
+`BioShield_features/` contains feature matrices for the released model (`phys_BioShield.npy`, `esm35_BioShield.npy`). The `esm8` and `esm150` matrices were used only for ablation comparisons and are not part of the released model.

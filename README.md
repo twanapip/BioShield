@@ -261,4 +261,4 @@ If you use BioShield in academic work, please cite the associated project or the
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE) © 2026 Muhammad Haider Shahbaz.
+Released under the [MIT License](LICENSE) © 2026 Muhammad Ahmad Khan & Muhammad Haider Shahbaz.
